@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação DataBit</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 font-inter">
+    <!-- Barra de Navegação -->
+    <nav class="bg-gray-800 shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5060/5060502.png" alt="DataBit Logo" class="h-10">
+                    <span class="ml-3 text-xl font-bold text-white">DataBit</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#overview" class="nav-link text-gray-300 hover:text-white">Visão Geral</a>
+                    <a href="#features" class="nav-link text-gray-300 hover:text-white">Funcionalidades</a>
+                    <a href="#commands" class="nav-link text-gray-300 hover:text-white">Comandos</a>
+                    <a href="#installation" class="nav-link text-gray-300 hover:text-white">Instalação</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="overview" class="pt-24 pb-16 bg-gradient-to-r from-blue-600 to-purple-600 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Bem-vindo ao DataBit</h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-8">Um bot Discord poderoso e modular, projetado para proteger, gerenciar e engajar sua comunidade com eficiência.</p>
+            <a href="#features" class="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition">Conheça as Funcionalidades</a>
+        </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section id="features" class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center">Funcionalidades</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-blue-500 text-3xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Anti-Raid</h3>
+                    <p class="text-gray-300">Proteção avançada contra raids, com monitoramento de mensagens, canais, bans e convites, incluindo modo de lockdown automático.</p>
+                </div>
+                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-blue-500 text-3xl mb-4">🎫</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Sistema de Tickets</h3>
+                    <p class="text-gray-300">Gerenciamento de tickets personalizável com suporte a múltiplas categorias, notificações e avaliações.</p>
+                </div>
+                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-blue-500 text-3xl mb-4">👋</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Boas-Vindas</h3>
+                    <p class="text-gray-300">Imagens de boas-vindas dinâmicas com personalização de texto, avatar e fundo, além de atribuição automática de cargos.</p>
+                </div>
+                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-blue-500 text-3xl mb-4">📝</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Registro</h3>
+                    <p class="text-gray-300">Sistema de registro automático com embeds personalizáveis e atribuição de cargos após interação.</p>
+                </div>
+                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-blue-500 text-3xl mb-4">⚙️</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Configuração Modular</h3>
+                    <p class="text-gray-300">Cogs dinâmicos que permitem adicionar ou remover funcionalidades sem reiniciar o bot.</p>
+                </div>
+                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+                    <div class="text-blue-500 text-3xl mb-4">📊</div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Logging Avançado</h3>
+                    <p class="text-gray-300">Registro detalhado de ações com suporte a arquivos rotativos e console com codificação UTF-8.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comandos -->
+    <section id="commands" class="py-16 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center">Comandos Disponíveis</h2>
+            <div id="commands-search" class="mb-8 flex justify-center">
+                <input type="text" id="command-search-input" class="w-full max-w-md bg-gray-700 text-white rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Pesquisar comandos...">
+            </div>
+            <div id="commands-list" class="space-y-6">
+                <!-- Anti-Raid -->
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/config_antiraid</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Configura o sistema Anti-Raid de forma interativa.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
+                    <p class="text-gray-300"><strong>Funcionalidades:</strong> Ativar/desativar, definir canal de logs, ajustar limites de mensagens, canais, bans, etc.</p>
+                </div>
+                <!-- Tickets -->
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/config_tickets</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Configura o sistema de tickets.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
+                    <p class="text-gray-300"><strong>Parâmetros:</strong> Categoria, canal do menu, cargo de suporte, canal de avaliações, canal de logs, cor RGB, tempos de notificação/fechamento</p>
+                </div>
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/create_ticket_menu</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Cria o menu de tickets no canal configurado.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
+                </div>
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/person_tickets</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Personaliza as embeds do sistema de tickets.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
+                </div>
+                <!-- Boas-Vindas -->
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/config_welcome</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Configura o sistema de boas-vindas.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador ou dono do bot</p>
+                    <p class="text-gray-300"><strong>Parâmetros:</strong> Cargo, canal, URL/upload de fundo, texto, cor do texto, tamanho da fonte</p>
+                </div>
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/formater</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Edita a imagem de boas-vindas interativamente.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador ou dono do bot</p>
+                </div>
+                <!-- Registro -->
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/config_register</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Configura o sistema de registro.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
+                    <p class="text-gray-300"><strong>Parâmetros:</strong> Cargo a ser atribuído</p>
+                </div>
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/person_register</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Personaliza a embed de registro com modal ou upload de imagens.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
+                    <p class="text-gray-300"><strong>Parâmetros:</strong> Upload de imagem principal, upload de thumbnail</p>
+                </div>
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/create_register_embed</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Cria uma embed com o botão de registro.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
+                    <p class="text-gray-300"><strong>Parâmetros:</strong> Canal de destino</p>
+                </div>
+                <!-- Comandos do Dono -->
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/status</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Configura o status do bot em um servidor específico.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Dono do bot</p>
+                    <p class="text-gray-300"><strong>Parâmetros:</strong> ID do servidor</p>
+                </div>
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/status_all</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Atualiza o status global do bot em todos os servidores.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Dono do bot</p>
+                </div>
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/set_status_channel</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Define o canal para exibir o status em um servidor.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Dono do bot</p>
+                    <p class="text-gray-300"><strong>Parâmetros:</strong> ID do servidor, ID do canal</p>
+                </div>
+                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-white mb-2">/root_notify</h3>
+                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Envia notificação aos donos de servidores.</p>
+                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Dono do bot</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instalação -->
+    <section id="installation" class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center">Como Instalar</h2>
+            <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold text-white mb-4">Pré-requisitos</h3>
+                <ul class="list-disc list-inside text-gray-300 mb-6">
+                    <li>Python 3.8 ou superior</li>
+                    <li>Node.js (para dependências opcionais)</li>
+                    <li>Conta no Discord com permissões para criar bots</li>
+                    <li>Ambiente com suporte a UTF-8 (recomendado Linux ou WSL para Windows)</li>
+                </ul>
+                <h3 class="text-2xl font-semibold text-white mb-4">Passos de Instalação</h3>
+                <ol class="list-decimal list-inside text-gray-300 space-y-4">
+                    <li>
+                        <strong>Clone o repositório:</strong>
+                        <pre class="bg-gray-900 p-4 rounded-lg text-sm"><code>git clone https://github.com/codeprojects/databit.git
+cd databit</code></pre>
+                    </li>
+                    <li>
+                        <strong>Instale as dependências:</strong>
+                        <pre class="bg-gray-900 p-4 rounded-lg text-sm"><code>pip install -r requirements.txt</code></pre>
+                    </li>
+                    <li>
+                        <strong>Configure o arquivo .env:</strong>
+                        <p class="my-2">Crie um arquivo <code>.env</code> na raiz do projeto com o seguinte conteúdo:</p>
+                        <pre class="bg-gray-900 p-4 rounded-lg text-sm"><code>DISCORD_TOKEN=seu_token_aqui</code></pre>
+                        <p class="my-2">Obtenha o token do bot no <a href="https://discord.com/developers/applications" class="text-blue-500 hover:underline">Portal de Desenvolvedores do Discord</a>.</p>
+                    </li>
+                    <li>
+                        <strong>Inicie o bot:</strong>
+                        <pre class="bg-gray-900 p-4 rounded-lg text-sm"><code>python main.py</code></pre>
+                    </li>
+                    <li>
+                        <strong>Convide o bot para seu servidor:</strong>
+                        <p class="my-2">Use o link de convite gerado no Portal de Desenvolvedores, garantindo as permissões necessárias (todas as intents ativadas).</p>
+                    </li>
+                </ol>
+                <h3 class="text-2xl font-semibold text-white mt-8 mb-4">Estrutura de Arquivos</h3>
+                <pre class="bg-gray-900 p-4 rounded-lg text-sm"><code>databit/
+├── main.py
+├── cogs/
+│   ├── antiraid_cog.py
+│   ├── ticket_cog.py
+│   ├── welcome_cog.py
+│   ├── register_cog.py
+├── data/
+├── fonts/
+├── assets/
+├── logs/
+├── .env
+└── requirements.txt</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="py-16 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-8">Entre em Contato</h2>
+            <p class="text-gray-300 mb-6">Tem dúvidas ou sugestões? Junte-se ao nosso servidor de suporte ou entre em contato diretamente!</p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://discord.gg/seu-servidor" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition">Servidor de Suporte</a>
+                <a href="mailto:contato@codeprojects.com" class="inline-block bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-700 transition">E-mail</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 py-6 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">&copy; 2025 CodeProjects & RedeGamer. Todos os direitos reservados.</p>
+            <p class="text-gray-400 mt-2">Desenvolvido com 💙 no Brasil.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
