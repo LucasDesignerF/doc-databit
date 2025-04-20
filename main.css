@@ -1,0 +1,58 @@
+/* main.css */
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav {
+    transition: background-color 0.3s;
+}
+
+.nav-link {
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.feature-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.command-card {
+    transition: background-color 0.3s;
+}
+
+.command-card:hover {
+    background-color: #1f2937;
+}
+
+pre code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #d1d5db;
+}
+
+#command-search-input {
+    transition: box-shadow 0.3s;
+}
+
+#command-search-input:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
