@@ -165,7 +165,6 @@ main {
   gap: 2rem;
   flex-wrap: wrap;
   margin-bottom: 3rem;
-  animation: slideUp 1s ease-in;
 }
 
 .card {
@@ -179,6 +178,8 @@ main {
   border: 1px solid var(--accent-color);
   position: relative;
   overflow: hidden;
+  opacity: 1;
+  animation: slideUp 0.5s ease-in;
 }
 
 .card.highlight-card {
@@ -360,26 +361,11 @@ footer a:hover, footer a:focus {
   100% { box-shadow: 0 0 20px rgba(255, 111, 97, 0.5); }
 }
 
-.card[data-animate] {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.card[data-animate].visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* Acessibilidade */
 @media (prefers-reduced-motion: reduce) {
   *, *:before, *:after {
     animation: none !important;
     transition: none !important;
-  }
-  .card[data-animate] {
-    opacity: 1;
-    transform: none;
   }
 }
 
