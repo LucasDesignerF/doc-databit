@@ -3,210 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentação DataBit</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- SEO -->
+    <title>📚 Documentação DataBit - Guia Completo do Bot Discord</title>
+    <meta name="description" content="Explore a documentação completa do DataBit, o bot Discord gratuito e open-source com sistemas de tickets, registro, boas-vindas personalizáveis e proteção anti-raid.">
+    <meta name="keywords" content="documentação DataBit, bot Discord, bot gratuito, bot open-source, tickets Discord, anti-raid, boas-vindas personalizáveis, registro automático, moderação Discord">
+    <meta name="author" content="LucasDesignerF, CodeProjects, RedeGamer">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://doc-databit.pages.dev/">
+    <meta name="theme-color" content="#ff6f61">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://doc-databit.pages.dev/">
+    <meta property="og:title" content="📚 Documentação DataBit – Guia do Bot Discord Mais Completo">
+    <meta property="og:description" content="Aprenda a usar o DataBit com nossa documentação detalhada. Configure tickets, registros, boas-vindas com editor de imagens e proteção anti-raid. Gratuito e open-source!">
+    <meta property="og:image" content="assets/images/logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://doc-databit.pages.dev/">
+    <meta name="twitter:title" content="📚 Documentação DataBit – Guia do Bot Discord">
+    <meta name="twitter:description" content="Guia completo para o DataBit, com configuração de tickets, registros, boas-vindas personalizáveis via /formater e anti-raid. Gratuito e open-source.">
+    <meta name="twitter:image" content="assets/images/logo.png">
+
+    <!-- Ícones -->
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/images/logo.png">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/fonts/poppins.css">
+    <link rel="stylesheet" href="assets/fonts/orbitron.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r149/three.min.js" defer></script>
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Documentação DataBit",
+        "description": "Documentação completa do DataBit, um bot Discord gratuito e open-source com tickets, registros, boas-vindas personalizáveis e proteção anti-raid.",
+        "url": "https://docs.codeprojects.discloud.app/",
+        "image": "assets/images/logo.png",
+        "author": {
+            "@type": "Organization",
+            "name": "CodeProjects",
+            "url": "https://codeprojects.discloud.app/"
+        },
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "DataBit",
+            "url": "https://codeprojects.discloud.app/"
+        }
+    }
+    </script>
 </head>
-<body class="bg-gray-900 text-gray-100 font-inter">
-    <!-- Barra de Navegação -->
-    <nav class="bg-gray-800 shadow-lg fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <img src="https://cdn-icons-png.flaticon.com/512/5060/5060502.png" alt="DataBit Logo" class="h-10">
-                    <span class="ml-3 text-xl font-bold text-white">DataBit</span>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <a href="#overview" class="nav-link text-gray-300 hover:text-white">Visão Geral</a>
-                    <a href="#features" class="nav-link text-gray-300 hover:text-white">Funcionalidades</a>
-                    <a href="#commands" class="nav-link text-gray-300 hover:text-white">Comandos</a>
-                    <a href="#installation" class="nav-link text-gray-300 hover:text-white">Instalação</a>
-                    <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contato</a>
-                </div>
-            </div>
+<body>
+    <!-- Background 3D -->
+    <div id="canvas-bg" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav role="navigation" aria-label="Menu principal">
+        <div class="logo">
+            <img src="assets/images/logo.png" srcset="assets/images/logo.png 1x, assets/images/logo.png 2x" alt="Logo do DataBit" loading="lazy">
         </div>
+        <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="#overview" aria-label="Visão geral do DataBit">Visão Geral</a></li>
+            <li><a href="#features" aria-label="Funcionalidades do DataBit">Funcionalidades</a></li>
+            <li><a href="#commands" aria-label="Comandos do DataBit">Comandos</a></li>
+            <li><a href="#installation" aria-label="Instruções de instalação">Instalação</a></li>
+            <li><a href="#contact" aria-label="Contato e suporte">Contato</a></li>
+        </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section id="overview" class="pt-24 pb-16 bg-gradient-to-r from-blue-600 to-purple-600 text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Bem-vindo ao DataBit</h1>
-            <p class="text-lg md:text-xl text-gray-200 mb-8">Um bot Discord poderoso e modular, projetado para proteger, gerenciar e engajar sua comunidade com eficiência.</p>
-            <a href="#features" class="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition">Conheça as Funcionalidades</a>
+    <section id="overview" class="header">
+        <div class="header-title">
+            <img src="assets/images/logo.png" srcset="assets/images/logo.png 1x, assets/images/logo.png 2x" alt="Logo do DataBit" loading="lazy">
+            <h1>Documentação DataBit</h1>
         </div>
+        <p>Um bot Discord poderoso e modular, projetado para proteger, gerenciar e engajar sua comunidade com eficiência. Explore todos os recursos e configurações!</p>
+        <a href="#features" class="cta-button">Conheça as Funcionalidades</a>
     </section>
 
     <!-- Funcionalidades -->
-    <section id="features" class="py-16 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white mb-8 text-center">Funcionalidades</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="text-blue-500 text-3xl mb-4">🛡️</div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Anti-Raid</h3>
-                    <p class="text-gray-300">Proteção avançada contra raids, com monitoramento de mensagens, canais, bans e convites, incluindo modo de lockdown automático.</p>
-                </div>
-                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="text-blue-500 text-3xl mb-4">🎫</div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Sistema de Tickets</h3>
-                    <p class="text-gray-300">Gerenciamento de tickets personalizável com suporte a múltiplas categorias, notificações e avaliações.</p>
-                </div>
-                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="text-blue-500 text-3xl mb-4">👋</div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Boas-Vindas</h3>
-                    <p class="text-gray-300">Imagens de boas-vindas dinâmicas com personalização de texto, avatar e fundo, além de atribuição automática de cargos.</p>
-                </div>
-                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="text-blue-500 text-3xl mb-4">📝</div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Registro</h3>
-                    <p class="text-gray-300">Sistema de registro automático com embeds personalizáveis e atribuição de cargos após interação.</p>
-                </div>
-                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="text-blue-500 text-3xl mb-4">⚙️</div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Configuração Modular</h3>
-                    <p class="text-gray-300">Cogs dinâmicos que permitem adicionar ou remover funcionalidades sem reiniciar o bot.</p>
-                </div>
-                <div class="feature-card bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-                    <div class="text-blue-500 text-3xl mb-4">📊</div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Logging Avançado</h3>
-                    <p class="text-gray-300">Registro detalhado de ações com suporte a arquivos rotativos e console com codificação UTF-8.</p>
-                </div>
-            </div>
-        </div>
+    <section id="features" class="content" aria-label="Funcionalidades do DataBit">
+        <h2>Funcionalidades</h2>
+        <article class="card">
+            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+            <h3>Anti-Raid</h3>
+            <p>Proteção avançada contra raids, com monitoramento de mensagens, canais, bans e convites, incluindo modo de lockdown automático.</p>
+        </article>
+        <article class="card">
+            <i class="fas fa-ticket-alt" aria-hidden="true"></i>
+            <h3>Sistema de Tickets</h3>
+            <p>Gerenciamento de tickets personalizável com suporte a múltiplas categorias, notificações e avaliações.</p>
+        </article>
+        <article class="card highlight-card">
+            <i class="fas fa-handshake" aria-hidden="true"></i>
+            <h3>Boas-Vindas</h3>
+            <p>Imagens de boas-vindas dinâmicas com personalização de texto, avatar e fundo, além de atribuição automática de cargos.</p>
+        </article>
+        <article class="card">
+            <i class="fas fa-user-check" aria-hidden="true"></i>
+            <h3>Registro</h3>
+            <p>Sistema de registro automático com embeds personalizáveis e atribuição de cargos após interação.</p>
+        </article>
+        <article class="card">
+            <i class="fas fa-cogs" aria-hidden="true"></i>
+            <h3>Configuração Modular</h3>
+            <p>Cogs dinâmicos que permitem adicionar ou remover funcionalidades sem reiniciar o bot.</p>
+        </article>
+        <article class="card">
+            <i class="fas fa-chart-line" aria-hidden="true"></i>
+            <h3>Logging Avançado</h3>
+            <p>Registro detalhado de ações com suporte a arquivos rotativos e console com codificação UTF-8.</p>
+        </article>
     </section>
 
     <!-- Comandos -->
-    <section id="commands" class="py-16 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white mb-8 text-center">Comandos Disponíveis</h2>
-            <div id="commands-search" class="mb-8 flex justify-center">
-                <input type="text" id="command-search-input" class="w-full max-w-md bg-gray-700 text-white rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Pesquisar comandos...">
-            </div>
-            <div id="commands-list" class="space-y-6">
-                <!-- Anti-Raid -->
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/config_antiraid</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Configura o sistema Anti-Raid de forma interativa.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
-                    <p class="text-gray-300"><strong>Funcionalidades:</strong> Ativar/desativar, definir canal de logs, ajustar limites de mensagens, canais, bans, etc.</p>
-                </div>
-                <!-- Tickets -->
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/config_tickets</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Configura o sistema de tickets.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
-                    <p class="text-gray-300"><strong>Parâmetros:</strong> Categoria, canal do menu, cargo de suporte, canal de avaliações, canal de logs, cor RGB, tempos de notificação/fechamento</p>
-                </div>
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/create_ticket_menu</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Cria o menu de tickets no canal configurado.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
-                </div>
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/person_tickets</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Personaliza as embeds do sistema de tickets.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
-                </div>
-                <!-- Boas-Vindas -->
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/config_welcome</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Configura o sistema de boas-vindas.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador ou dono do bot</p>
-                    <p class="text-gray-300"><strong>Parâmetros:</strong> Cargo, canal, URL/upload de fundo, texto, cor do texto, tamanho da fonte</p>
-                </div>
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/formater</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Edita a imagem de boas-vindas interativamente.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador ou dono do bot</p>
-                </div>
-                <!-- Registro -->
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/config_register</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Configura o sistema de registro.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
-                    <p class="text-gray-300"><strong>Parâmetros:</strong> Cargo a ser atribuído</p>
-                </div>
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/person_register</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Personaliza a embed de registro com modal ou upload de imagens.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
-                    <p class="text-gray-300"><strong>Parâmetros:</strong> Upload de imagem principal, upload de thumbnail</p>
-                </div>
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/create_register_embed</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Cria uma embed com o botão de registro.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Administrador</p>
-                    <p class="text-gray-300"><strong>Parâmetros:</strong> Canal de destino</p>
-                </div>
-                <!-- Comandos do Dono -->
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/status</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Configura o status do bot em um servidor específico.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Dono do bot</p>
-                    <p class="text-gray-300"><strong>Parâmetros:</strong> ID do servidor</p>
-                </div>
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/status_all</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Atualiza o status global do bot em todos os servidores.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Dono do bot</p>
-                </div>
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/set_status_channel</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Define o canal para exibir o status em um servidor.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Dono do bot</p>
-                    <p class="text-gray-300"><strong>Parâmetros:</strong> ID do servidor, ID do canal</p>
-                </div>
-                <div class="command-card bg-gray-900 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-white mb-2">/root_notify</h3>
-                    <p class="text-gray-300 mb-2"><strong>Descrição:</strong> Envia notificação aos donos de servidores.</p>
-                    <p class="text-gray-300 mb-2"><strong>Permissões:</strong> Dono do bot</p>
-                </div>
-            </div>
+    <section id="commands" class="content" aria-label="Comandos disponíveis">
+        <h2>Comandos Disponíveis</h2>
+        <div id="commands-search">
+            <input type="text" id="command-search-input" placeholder="Pesquisar comandos..." aria-label="Pesquisar comandos">
+        </div>
+        <div id="commands-list">
+            <!-- Anti-Raid -->
+            <article class="card command-card">
+                <h3>/config_antiraid</h3>
+                <p><strong>Descrição:</strong> Configura o sistema Anti-Raid de forma interativa.</p>
+                <p><strong>Permissões:</strong> Administrador</p>
+                <p><strong>Funcionalidades:</strong> Ativar/desativar, definir canal de logs, ajustar limites de mensagens, canais, bans, etc.</p>
+            </article>
+            <!-- Tickets -->
+            <article class="card command-card">
+                <h3>/config_tickets</h3>
+                <p><strong>Descrição:</strong> Configura o sistema de tickets.</p>
+                <p><strong>Permissões:</strong> Administrador</p>
+                <p><strong>Parâmetros:</strong> Categoria, canal do menu, cargo de suporte, canal de avaliações, canal de logs, cor RGB, tempos de notificação/fechamento</p>
+            </article>
+            <article class="card command-card">
+                <h3>/create_ticket_menu</h3>
+                <p><strong>Descrição:</strong> Cria o menu de tickets no canal configurado.</p>
+                <p><strong>Permissões:</strong> Administrador</p>
+            </article>
+            <article class="card command-card">
+                <h3>/person_tickets</h3>
+                <p><strong>Descrição:</strong> Personaliza as embeds do sistema de tickets.</p>
+                <p><strong>Permissões:</strong> Administrador</p>
+            </article>
+            <!-- Boas-Vindas -->
+            <article class="card command-card">
+                <h3>/config_welcome</h3>
+                <p><strong>Descrição:</strong> Configura o sistema de boas-vindas.</p>
+                <p><strong>Permissões:</strong> Administrador ou dono do bot</p>
+                <p><strong>Parâmetros:</strong> Cargo, canal, URL/upload de fundo, texto, cor do texto, tamanho da fonte</p>
+            </article>
+            <article class="card command-card">
+                <h3>/formater</h3>
+                <p><strong>Descrição:</strong> Edita a imagem de boas-vindas interativamente.</p>
+                <p><strong>Permissões:</strong> Administrador ou dono do bot</p>
+            </article>
+            <!-- Registro -->
+            <article class="card command-card">
+                <h3>/config_register</h3>
+                <p><strong>Descrição:</strong> Configura o sistema de registro.</p>
+                <p><strong>Permissões:</strong> Administrador</p>
+                <p><strong>Parâmetros:</strong> Cargo a ser atribuído</p>
+            </article>
+            <article class="card command-card">
+                <h3>/person_register</h3>
+                <p><strong>Descrição:</strong> Personaliza a embed de registro com modal ou upload de imagens.</p>
+                <p><strong>Permissões:</strong> Administrador</p>
+                <p><strong>Parâmetros:</strong> Upload de imagem principal, upload de thumbnail</p>
+            </article>
+            <article class="card command-card">
+                <h3>/create_register_embed</h3>
+                <p><strong>Descrição:</strong> Cria uma embed com o botão de registro.</p>
+                <p><strong>Permissões:</strong> Administrador</p>
+                <p><strong>Parâmetros:</strong> Canal de destino</p>
+            </article>
+            <!-- Comandos do Dono -->
+            <article class="card command-card">
+                <h3>/status</h3>
+                <p><strong>Descrição:</strong> Configura o status do bot em um servidor específico.</p>
+                <p><strong>Permissões:</strong> Dono do bot</p>
+                <p><strong>Parâmetros:</strong> ID do servidor</p>
+            </article>
+            <article class="card command-card">
+                <h3>/status_all</h3>
+                <p><strong>Descrição:</strong> Atualiza o status global do bot em todos os servidores.</p>
+                <p><strong>Permissões:</strong> Dono do bot</p>
+            </article>
+            <article class="card command-card">
+                <h3>/set_status_channel</h3>
+                <p><strong>Descrição:</strong> Define o canal para exibir o status em um servidor.</p>
+                <p><strong>Permissões:</strong> Dono do bot</p>
+                <p><strong>Parâmetros:</strong> ID do servidor, ID do canal</p>
+            </article>
+            <article class="card command-card">
+                <h3>/root_notify</h3>
+                <p><strong>Descrição:</strong> Envia notificação aos donos de servidores.</p>
+                <p><strong>Permissões:</strong> Dono do bot</p>
+            </article>
         </div>
     </section>
 
     <!-- Instalação -->
-    <section id="installation" class="py-16 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white mb-8 text-center">Como Instalar</h2>
-            <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-semibold text-white mb-4">Pré-requisitos</h3>
-                <ul class="list-disc list-inside text-gray-300 mb-6">
-                    <li>Python 3.8 ou superior</li>
-                    <li>Node.js (para dependências opcionais)</li>
-                    <li>Conta no Discord com permissões para criar bots</li>
-                    <li>Ambiente com suporte a UTF-8 (recomendado Linux ou WSL para Windows)</li>
-                </ul>
-                <h3 class="text-2xl font-semibold text-white mb-4">Passos de Instalação</h3>
-                <ol class="list-decimal list-inside text-gray-300 space-y-4">
-                    <li>
-                        <strong>Clone o repositório:</strong>
-                        <pre class="bg-gray-900 p-4 rounded-lg text-sm"><code>git clone https://github.com/codeprojects/databit.git
+    <section id="installation" class="content" aria-label="Instruções de instalação">
+        <h2>Como Instalar</h2>
+        <article class="card">
+            <h3>Pré-requisitos</h3>
+            <ul>
+                <li>Python 3.8 ou superior</li>
+                <li>Node.js (para dependências opcionais)</li>
+                <li>Conta no Discord com permissões para criar bots</li>
+                <li>Ambiente com suporte a UTF-8 (recomendado Linux ou WSL para Windows)</li>
+            </ul>
+            <h3>Passos de Instalação</h3>
+            <ol>
+                <li>
+                    <strong>Clone o repositório:</strong>
+                    <pre><code>git clone https://github.com/codeprojects/databit.git
 cd databit</code></pre>
-                    </li>
-                    <li>
-                        <strong>Instale as dependências:</strong>
-                        <pre class="bg-gray-900 p-4 rounded-lg text-sm"><code>pip install -r requirements.txt</code></pre>
-                    </li>
-                    <li>
-                        <strong>Configure o arquivo .env:</strong>
-                        <p class="my-2">Crie um arquivo <code>.env</code> na raiz do projeto com o seguinte conteúdo:</p>
-                        <pre class="bg-gray-900 p-4 rounded-lg text-sm"><code>DISCORD_TOKEN=seu_token_aqui</code></pre>
-                        <p class="my-2">Obtenha o token do bot no <a href="https://discord.com/developers/applications" class="text-blue-500 hover:underline">Portal de Desenvolvedores do Discord</a>.</p>
-                    </li>
-                    <li>
-                        <strong>Inicie o bot:</strong>
-                        <pre class="bg-gray-900 p-4 rounded-lg text-sm"><code>python main.py</code></pre>
-                    </li>
-                    <li>
-                        <strong>Convide o bot para seu servidor:</strong>
-                        <p class="my-2">Use o link de convite gerado no Portal de Desenvolvedores, garantindo as permissões necessárias (todas as intents ativadas).</p>
-                    </li>
-                </ol>
-                <h3 class="text-2xl font-semibold text-white mt-8 mb-4">Estrutura de Arquivos</h3>
-                <pre class="bg-gray-900 p-4 rounded-lg text-sm"><code>databit/
+                </li>
+                <li>
+                    <strong>Instale as dependências:</strong>
+                    <pre><code>pip install -r requirements.txt</code></pre>
+                </li>
+                <li>
+                    <strong>Configure o arquivo .env:</strong>
+                    <p>Crie um arquivo <code>.env</code> na raiz do projeto com o seguinte conteúdo:</p>
+                    <pre><code>DISCORD_TOKEN=seu_token_aqui</code></pre>
+                    <p>Obtenha o token do bot no <a href="https://discord.com/developers/applications">Portal de Desenvolvedores do Discord</a>.</p>
+                </li>
+                <li>
+                    <strong>Inicie o bot:</strong>
+                    <pre><code>python main.py</code></pre>
+                </li>
+                <li>
+                    <strong>Convide o bot para seu servidor:</strong>
+                    <p>Use o link de convite gerado no Portal de Desenvolvedores, garantindo as permissões necessárias (todas as intents ativadas).</p>
+                </li>
+            </ol>
+            <h3>Estrutura de Arquivos</h3>
+            <pre><code>databit/
 ├── main.py
 ├── cogs/
 │   ├── antiraid_cog.py
@@ -219,30 +270,22 @@ cd databit</code></pre>
 ├── logs/
 ├── .env
 └── requirements.txt</code></pre>
-            </div>
-        </div>
+        </article>
     </section>
 
     <!-- Contato -->
-    <section id="contact" class="py-16 bg-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold text-white mb-8">Entre em Contato</h2>
-            <p class="text-gray-300 mb-6">Tem dúvidas ou sugestões? Junte-se ao nosso servidor de suporte ou entre em contato diretamente!</p>
-            <div class="flex justify-center space-x-4">
-                <a href="https://discord.gg/yRn9fYykAA" class="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition">Servidor de Suporte</a>
-                <a href="mailto:ofc.rede@gmil.com" class="inline-block bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-700 transition">E-mail</a>
-            </div>
+    <section id="contact" class="content" aria-label="Contato e suporte">
+        <h2>Entre em Contato</h2>
+        <p>Tem dúvidas ou sugestões? Junte-se ao nosso servidor de suporte ou entre em contato diretamente!</p>
+        <div class="cta-container">
+            <a href="https://discord.gg/AhcHfUpNeM" class="cta-button">Servidor de Suporte</a>
+            <a href="mailto:ofc.rede@gmail.com" class="cta-button secondary">E-mail</a>
         </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer class="bg-gray-900 py-6 border-t border-gray-700">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-400">&copy; 2025 CodeProjects & RedeGamer. Todos os direitos reservados.</p>
-            <p class="text-gray-400 mt-2">Desenvolvido com 💙 no Brasil.</p>
-        </div>
+    <!-- Footer -->
+    <footer aria-label="Rodapé do site">
+        <p>Feito com ❤️ por <a href="https://github.com/LucasDesignerF">LucasDesignerF</a>, <a href="https://codeprojects.discloud.app/">CodeProjects</a> e <a href="https://discord.gg/x74fnzcz2S">RedeGamer</a> | <a href="https://discord.gg/AhcHfUpNeM">Servidor Oficial</a></p>
     </footer>
-
-    <script src="main.js"></script>
 </body>
 </html>
